@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="local-token" content="{{LOCAL_TOKEN}}">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; connect-src 'self'; form-action 'self'; img-src 'none'; object-src 'none'; script-src 'self'; style-src 'self'">
+  <meta name="referrer" content="no-referrer">
+  <title>本机媒体链接解析</title>
+  <link rel="stylesheet" href="/assets/app.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="masthead">
+      <a class="brand" href="/" aria-label="本机媒体链接解析首页">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span class="brand-name">本机媒体链接解析</span>
+      </a>
+      <span class="local-indicator"><span aria-hidden="true"></span>仅在本机运行</span>
+    </header>
+
+    <section class="intro" aria-labelledby="pageTitle">
+      <div class="intro-copy-block">
+        <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span>本机工作台 · 单条链接</p>
+        <h1 id="pageTitle">粘贴链接，<br><em>在本机解析。</em></h1>
+        <p class="intro-copy">粘贴一条视频、音乐或直播链接，在本机查看解析信息。</p>
+      </div>
+      <div class="intro-note" aria-label="本机解析说明">
+        <span class="intro-note-index" aria-hidden="true">01</span>
+        <p>仅供本机使用</p>
+        <span class="intro-note-rule" aria-hidden="true"></span>
+        <p>结果留在当前页面</p>
+      </div>
+      <span class="intro-orbit" aria-hidden="true"></span>
+    </section>
+
+    <div class="content-grid">
+      <section class="workspace" aria-label="链接解析">
+        <div class="workspace-heading">
+          <div>
+            <p class="section-index">解析工作区 <span>01 / 01</span></p>
+            <h2>输入媒体链接</h2>
+          </div>
+          <span class="workspace-stamp" aria-hidden="true">本机<br>解析</span>
+        </div>
+
+        <noscript><p class="noscript-message">请在浏览器启用 JavaScript 后刷新页面，再使用本机解析。</p></noscript>
+        <form id="parseForm" method="post" action="/api/parse" autocomplete="off">
+          <label class="field-label" for="mediaUrl">媒体链接 <span>必填</span></label>
+          <div class="url-field">
+            <span class="url-prefix" aria-hidden="true">URL</span>
+            <input id="mediaUrl" name="url" type="url" inputmode="url" placeholder="粘贴单条视频、音乐或直播链接" autocomplete="off" required>
+          </div>
+
+          <details class="advanced">
+            <summary>个人访问选项 <span>按需填写</span></summary>
+            <div class="advanced-content">
+              <label class="field-label" for="cookieInput">个人 Cookie</label>
+              <input id="cookieInput" class="cookie-input" name="cookie" type="password" autocomplete="off" spellcheck="false" placeholder="仅在需要本人可访问内容时填写">
+              <p class="field-hint">Cookie 仅用于本次本机解析，请勿在共享设备上填写。</p>
+
+              <label class="field-label mode-label" for="biliMode">B站解析模式</label>
+              <select id="biliMode" name="bili_mode">
+                <option value="progressive">普通播放</option>
+                <option value="authenticated">本人可访问的播放</option>
+                <option value="dash">DASH 音视频地址</option>
+              </select>
+            </div>
+          </details>
+
+          <div class="form-actions">
+            <button id="parseButton" class="button button-primary" type="submit">
+              <span class="button-label">开始解析</span>
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </button>
+            <button id="resetButton" class="button button-quiet" type="reset">清空</button>
+          </div>
+        </form>
+
+        <p id="status" class="status" role="status" aria-live="polite">结果只显示在此页面，不会保存。</p>
+
+        <section id="resultPanel" class="result-panel" aria-labelledby="resultHeading" hidden>
+          <div class="result-heading-row">
+            <div>
+              <p class="eyebrow result-eyebrow">解析结果</p>
+              <h2 id="resultHeading">媒体信息</h2>
+            </div>
+            <button id="copyButton" class="copy-button" type="button">复制链接</button>
+          </div>
+          <h3 id="resultTitle" class="result-title"></h3>
+          <p id="resultMeta" class="result-meta"></p>
+          <a id="mediaLink" class="media-link" href="#" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" hidden>打开解析地址 <span aria-hidden="true">↗</span></a>
+          <details class="raw-details">
+            <summary>查看原始 JSON</summary>
+            <pre id="rawJson" dir="auto"></pre>
+          </details>
+        </section>
+      </section>
+
+      <aside class="guide-rail" aria-label="本机解析说明">
+        <section class="guide-card">
+          <p class="guide-kicker">如何使用</p>
+          <h2>三步，完成一次解析。</h2>
+          <ol class="steps-list">
+            <li><span>01</span><p>粘贴一条媒体链接</p></li>
+            <li><span>02</span><p>在本机完成解析</p></li>
+            <li><span>03</span><p>查看并复制结果</p></li>
+          </ol>
+          <p class="guide-footnote">支持视频、音乐与直播链接。解析能力取决于来源平台及其访问权限。</p>
+        </section>
+        <div class="privacy-note">
+          <span class="privacy-mark" aria-hidden="true">L</span>
+          <p><strong>留在你的设备上</strong><br>解析结果只呈现在本页，不会保存。</p>
+        </div>
+      </aside>
+    </div>
+
+    <aside class="friends-card" aria-label="作者的在线站点">
+      <div class="friends-mark" aria-hidden="true">✳</div>
+      <div class="friends-copy">
+        <p class="eyebrow">作者的在线站点</p>
+        <h2>想和好友一起使用？</h2>
+        <p>前往作者的网站，和好友一起使用。</p>
+      </div>
+      <a id="friendsLink" class="friends-link" href="https://xingvrchat.com/" target="_blank" rel="noopener noreferrer">访问在线站点 <span aria-hidden="true">↗</span></a>
+    </aside>
+
+    <footer class="page-footer">
+      <span>链接解析仅供个人使用，请遵守平台规则。</span>
+      <span>本机启动与更新步骤见随项目提供的使用指南。</span>
+    </footer>
+  </main>
+</body>
+</html>

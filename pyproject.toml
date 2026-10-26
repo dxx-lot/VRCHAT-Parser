@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vrchat-link-parsers"
+version = "0.2.1"
+description = "Single video, song and live-room link parsing algorithms"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = ["httpx==0.28.1", "certifi>=2026.10.19"]
+
+[project.urls]
+Repository = "https://github.com/dxx-lot/VRCHAT-Parser"
+
+[project.scripts]
+vrc-parse = "vrc_parsers.__main__:main"
+vrc-parser-web = "vrc_parsers.web:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.package-data]
+vrc_parsers = ["web_assets/*.html", "web_assets/*.css", "web_assets/*.js"]

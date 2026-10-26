@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "kind": "private-mit-security-review",
+  "scope": "single-video-single-song-live-room-and-loopback-ui",
+  "license_status": "owner-selected-mit",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 83,
+      "sha256": "5c3504f9e4fe297d65f6f1d4b79eaaff6114750ff35f6ea348efb795573d1105"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 1437,
+      "sha256": "7770fc965bed97e75d641a57c3e1f4d0d2f82a71aaa1bb45c9fa63a9cb431721"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1107,
+      "sha256": "b4badae211bb1910b11a8df202b75278563dd521dbb05012e006ab5a9bf7e0f9"
+    },
+    {
+      "path": "README.md",
+      "size": 5915,
+      "sha256": "309a16841664b7aa1aec01420162f62a78962cfe59c6d33d50a16d7ce6ebd6d4"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "size": 1294,
+      "sha256": "b7c291b483f8d20293035e42a643b995211b95de259625e157b08ba56fcc80d6"
+    },
+    {
+      "path": "docs/ALGORITHMS.md",
+      "size": 5559,
+      "sha256": "036af4f6701ae441ce175a1c31c4c9c080c815ac767f6c0bb29bb7451f8370e0"
+    },
+    {
+      "path": "docs/LICENSING.md",
+      "size": 1481,
+      "sha256": "ee45f6762ecfc7b0a8176320164ac59dd4c0b114262cb4d622ae05af1abca4f6"
+    },
+    {
+      "path": "docs/LOCAL_USE.md",
+      "size": 5632,
+      "sha256": "0ff1e3602778b49c731512184d7e443e7d0e03935cd2eb6467e5ff4b32f120b4"
+    },
+    {
+      "path": "docs/SCOPE.md",
+      "size": 1884,
+      "sha256": "4254221336f29616727a3b542a30f2fc67076d190e5109a0ceb97dc4a9a7c71b"
+    },
+    {
+      "path": "examples/parse_one.py",
+      "size": 350,
+      "sha256": "3efbf033dfb581057a03331de88ede9bfd05bd1326d56823e864f729c60a524e"
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 724,
+      "sha256": "053103c6cfd60b84dfa7564536b7e6c2f612b31acbd419409e249c390da61d58"
+    },
+    {
+      "path": "src/vrc_parsers/__init__.py",
+      "size": 233,
+      "sha256": "a57e07cd431b964d806552d04f110d5d902bf616676a348de46532034aca8e24"
+    },
+    {
+      "path": "src/vrc_parsers/__main__.py",
+      "size": 982,
+      "sha256": "e10f5d9dd03710509690d8bc7301993a42f3edc703a4d45c92b96997b554ced3"
+    },
+    {
+      "path": "src/vrc_parsers/base.py",
+      "size": 2125,
+      "sha256": "662c9a8b82e47141a24c9d04ec890f0599ae517f55d4dd9fdc583519e80dac48"
+    },
+    {
+      "path": "src/vrc_parsers/bilibili.py",
+      "size": 12706,
+      "sha256": "cc718a0fba5b20d17a963d0a103be83948ecaea1957df9c9a1845f39cddfaddf"
+    },
+    {
+      "path": "src/vrc_parsers/bilibili_live.py",
+      "size": 1623,
+      "sha256": "dfdf835bc88eff799710f2c41dbc605b8f0a6f23fac8a903cae779a10ebedb66"
+    },
+    {
+      "path": "src/vrc_parsers/client.py",
+      "size": 5165,
+      "sha256": "ee8036aba38a9984da1e6e14ae6bdc5e2c2e1c20d6f57494d83e197a5c771131"
+    },
+    {
+      "path": "src/vrc_parsers/douyin.py",
+      "size": 4669,
+      "sha256": "af862dbbbc5ef84e21228adc9b20d48582cfe1f7412c2eaa1136edf0e0053bd5"
+    },
+    {
+      "path": "src/vrc_parsers/douyin_live.py",
+      "size": 2273,
+      "sha256": "d7e2a39283598cc2450dd14d26ba0f6df7c59242a1c31a3bb23419ed113f9053"
+    },
+    {
+      "path": "src/vrc_parsers/douyu_live.py",
+      "size": 4173,
+      "sha256": "a7dfa679e5c6c97055397a80ca4f277df4efb42dea00d30aefde57abfc000289"
+    },
+    {
+      "path": "src/vrc_parsers/huya_live.py",
+      "size": 10795,
+      "sha256": "afd4ae6a62cba21198a21d4f5162419eac7d21c65ce14c302175d3284de39485"
+    },
+    {
+      "path": "src/vrc_parsers/kugou.py",
+      "size": 4121,
+      "sha256": "97e9449a48a22d8a32d2f1d203f2b9ac6aa75238f578bdaf8ae409b8b2d399ae"
+    },
+    {
+      "path": "src/vrc_parsers/live_direct.py",
+      "size": 3004,
+      "sha256": "25aa28c54a8f09d60c9d84464841dbb151d69c4c12868cf5370748d3ca6cdc6f"
+    },
+    {
+      "path": "src/vrc_parsers/netease.py",
+      "size": 5390,
+      "sha256": "4d4643165b38d3e9668d340a734a607d358ee7b887d450f90b05f92b389d929a"
+    },
+    {
+      "path": "src/vrc_parsers/qqmusic.py",
+      "size": 5936,
+      "sha256": "1f6764d09477bc170f50611a9d10aed03cafe146c606ab87eba0d64f1a22c3d8"
+    },
+    {
+      "path": "src/vrc_parsers/utils.py",
+      "size": 621,
+      "sha256": "2ff736f34d2043ec54c99ba429ae26d34dfe53641c951108ccfd13b0aa89c959"
+    },
+    {
+      "path": "src/vrc_parsers/web.py",
+      "size": 9512,
+      "sha256": "a07e3e9714ea3e2ec2f758b2978142e6039730c1965d5f8d7efa5efd1b1e27f6"
+    },
+    {
+      "path": "src/vrc_parsers/web_assets/app.css",
+      "size": 15310,
+      "sha256": "eaf6d5787a28f85097f29b96bdbd9f4e31d8c52d2f88471040a84a5692a95ce7"
+    },
+    {
+      "path": "src/vrc_parsers/web_assets/app.js",
+      "size": 5924,
+      "sha256": "b6fbb4e5f4497896fabbc4727769ca0a006da47d2a4f11aeb45fe01f65ff5b67"
+    },
+    {
+      "path": "src/vrc_parsers/web_assets/index.html",
+      "size": 6719,
+      "sha256": "94c04b23efe3d06c8935117fd3cf57f0f76c9696faf974f27ccb2d07650ae209"
+    },
+    {
+      "path": "start-local.cmd",
+      "size": 689,
+      "sha256": "d6dcbb78e5a52166f502fe91ba25794341af784bd03e1d5adf0b9d73d4bf87fe"
+    },
+    {
+      "path": "start-local.sh",
+      "size": 481,
+      "sha256": "63411c9bf6100a96136fb4fb6166a8f8bb7c454a9592bbacfb7fe5ec70a15227"
+    },
+    {
+      "path": "tests/test_core.py",
+      "size": 13259,
+      "sha256": "2a5531ce340cf4c554bedb0041703661f67248b1ab4ce0d4dcf8c28e89286a82"
+    },
+    {
+      "path": "tests/test_music.py",
+      "size": 7535,
+      "sha256": "b997cfe369a6174a8bdf9f058c486d000c2c96563640411b1afb9db0a172b86a"
+    },
+    {
+      "path": "tests/test_web.py",
+      "size": 11365,
+      "sha256": "50a2ba91ee292db2e5ef69517dc4e8515801e0edaf2876f1cb7641d96305a2d0"
+    },
+    {
+      "path": "tools/check_export.py",
+      "size": 5470,
+      "sha256": "cc6549200b5935422f8b3fcebc0eb386c1d5b9c00f25add5e614744b355d50ee"
+    }
+  ]
+}
