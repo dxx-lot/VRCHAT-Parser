@@ -4,6 +4,7 @@
 - 所有本机网页服务固定绑定 `127.0.0.1`，只调用本库单链接解析接口，不提供公网/局域网服务、媒体代理或后台。好友入口仅通过普通链接打开作者指定的 `https://xingvrchat.com/`，不附带用户数据。
 - 未经仓库所有者另行明确决定，不加入歌单、收藏、批量、连播、电台、API 中转、Minecraft、账户后台、私人节点、代理服务或部署系统。
 - 不提交真实 Cookie、账户信息、签名媒体记录、私钥、生产地址或用户数据；测试仅使用合成数据。
+- 为作者创建的自动化提交必须同时显式设置 author 和 committer 为 GitHub noreply 邮箱，并在上传前核验两个字段；禁止使用 QQ 邮箱或继承未经核验的本机默认邮箱，不导入原项目的 Git 历史。
 - 代码不得依赖原站的 `main`、`settings`、Redis 或数据库；凭据只允许由调用者显式传入，结果和日志不回显凭据。
 - 新增平台须保持输入域名和媒体类型边界、超时、失败行为及离线协议测试。平台接口可能变化，不将离线通过写成真实平台可用。
 - 验证：`PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v`。文件变更须同步 `export-manifest.json` 后运行 `python tools/check_export.py`。
