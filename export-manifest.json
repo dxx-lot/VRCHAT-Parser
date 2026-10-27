@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "kind": "private-mit-security-review",
+  "kind": "parser-source-export",
   "scope": "single-video-single-song-live-room-and-loopback-ui",
   "license_status": "owner-selected-mit",
   "files": [
@@ -11,8 +11,8 @@
     },
     {
       "path": "AGENTS.md",
-      "size": 1685,
-      "sha256": "e2b66e33825a15f17902d8b7edf63c833c902a3800c2fc7ee0f53fd952c0c508"
+      "size": 1655,
+      "sha256": "32f22f5a47ac4856449cd1b0edf178eea68504880cfa93c66f79f553c152a2a6"
     },
     {
       "path": "LICENSE",
@@ -21,8 +21,8 @@
     },
     {
       "path": "README.md",
-      "size": 5915,
-      "sha256": "309a16841664b7aa1aec01420162f62a78962cfe59c6d33d50a16d7ce6ebd6d4"
+      "size": 5798,
+      "sha256": "5a5752213008f094380d9508475cfb8941bcebb5e64579ea6250e07292b852ab"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -32,7 +32,7 @@
     {
       "path": "docs/ALGORITHMS.md",
       "size": 5559,
-      "sha256": "036af4f6701ae441ce175a1c31c4c9c080c815ac767f6c0bb29bb7451f8370e0"
+      "sha256": "75e04861968563d2bb1faf9d588ee0c874343f1e3c31c68befe6e7e516a3b353"
     },
     {
       "path": "docs/LICENSING.md",
@@ -41,13 +41,13 @@
     },
     {
       "path": "docs/LOCAL_USE.md",
-      "size": 5632,
-      "sha256": "0ff1e3602778b49c731512184d7e443e7d0e03935cd2eb6467e5ff4b32f120b4"
+      "size": 5489,
+      "sha256": "e9a80137fb6b43324d6702527599e0fb6665bf275d17f8255dbea2323ae57a24"
     },
     {
       "path": "docs/SCOPE.md",
       "size": 1884,
-      "sha256": "4254221336f29616727a3b542a30f2fc67076d190e5109a0ceb97dc4a9a7c71b"
+      "sha256": "247d79e47b413468d67790472a80317d3819a18d55eecfde489c755c209a526a"
     },
     {
       "path": "examples/parse_one.py",
@@ -181,8 +181,8 @@
     },
     {
       "path": "tools/check_export.py",
-      "size": 5470,
-      "sha256": "cc6549200b5935422f8b3fcebc0eb386c1d5b9c00f25add5e614744b355d50ee"
+      "size": 5452,
+      "sha256": "e640322a252336f2e18b494a11c856b3d94d9be6b6c412c1c4698b6083888842"
     }
   ]
 }

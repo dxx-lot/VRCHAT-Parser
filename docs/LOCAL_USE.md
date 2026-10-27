@@ -4,7 +4,7 @@
 
 ## 下载项目
 
-如果仓库仍为 Private，下载前需要仓库所有者授予你的账户访问权限；没有权限时，请联系仓库所有者。仓库公开后可直接克隆或下载 ZIP。使用 Git 克隆：
+可直接克隆本仓库或下载 ZIP。使用 Git 克隆：
 
 ```sh
 git clone https://github.com/dxx-lot/VRCHAT-Parser.git

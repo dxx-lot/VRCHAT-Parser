@@ -1,4 +1,4 @@
-"""Read-only candidate layout and manifest checker; never deletes files."""
+"""Read-only export layout and manifest checker; never deletes files."""
 from __future__ import annotations
 
 import ast
@@ -43,7 +43,7 @@ def files():
 def main():
     manifest = json.loads((ROOT / "export-manifest.json").read_text(encoding="utf-8"))
     if manifest.get("schema_version") != 1 or manifest.get("license_status") != "owner-selected-mit":
-        raise ValueError("Unexpected candidate manifest state")
+        raise ValueError("Unexpected export manifest state")
     license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
     if not license_text.startswith("MIT License\n") or "Copyright (c) 2026 dxx-lot (https://github.com/dxx-lot/VRCHAT-Parser)" not in license_text:
         raise ValueError("MIT copyright and upstream attribution missing")
@@ -86,7 +86,7 @@ def main():
         if rel.endswith(".py"):
             compile(text, rel, "exec")
     print("PASS: %d allowlisted files + manifest; hashes, UTF-8, syntax and application boundaries verified." % len(EXPECTED))
-    print("Private candidate: MIT selected; Git metadata privacy and real platform acceptance require separate review.")
+    print("MIT license selected; Git metadata privacy and real platform acceptance are outside this check.")
 
 
 if __name__ == "__main__":

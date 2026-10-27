@@ -8,4 +8,4 @@
 - 代码不得依赖原站的 `main`、`settings`、Redis 或数据库；凭据只允许由调用者显式传入，结果和日志不回显凭据。
 - 新增平台须保持输入域名和媒体类型边界、超时、失败行为及离线协议测试。平台接口可能变化，不将离线通过写成真实平台可用。
 - 验证：`PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v`。文件变更须同步 `export-manifest.json` 后运行 `python tools/check_export.py`。
-- 此版本仍为私人审查候选，采用所有者最终选择的 MIT 许可；保留 LICENSE 中原作者及仓库出处，不附加禁止商用等矛盾条款，不自动修改仓库可见性。
+- 本项目采用 MIT 许可；保留 LICENSE 中原作者及仓库出处，不附加禁止商用等矛盾条款。仓库可见性由所有者管理，不自动修改。
